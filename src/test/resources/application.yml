@@ -1,0 +1,6 @@
+# Test 환경에서도 application.yml 정보 설정 가능
+# Memory DB 환경에서 테스트하고 싶다면 spring.datasource.url: jdbc:h2:mem:test 옵션으로 바꿔주면 된다!
+# 아무것도 써있지 않다면 default 옵션으로 Memory DB 환경이 선택됨
+
+logging.level:
+  org.hibernate.SQL: debug
