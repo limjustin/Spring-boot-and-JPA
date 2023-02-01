@@ -20,6 +20,13 @@ public class ItemService {
         itemRepository.save(item);
     }
 
+    @Transactional
+    public void updateItem(Long id, String name, int price) {
+        Item item = itemRepository.findOne(id);
+        item.setName(name);
+        item.setPrice(price);
+    }
+
     public Item findOne(Long itemId) {
         return itemRepository.findOne(itemId);
     }
@@ -27,4 +34,5 @@ public class ItemService {
     public List<Item> findItems() {
         return itemRepository.findAll();
     }
+
 }
